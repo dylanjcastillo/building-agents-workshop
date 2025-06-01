@@ -10,9 +10,9 @@ Before the workshop, please complete these steps:
 
 1. Install Python. The recommended approach is to use [uv](https://docs.astral.sh/uv/).
 2. Clone this repository, open it in a terminal, and run `uv sync` to install the dependencies.
-3. Create a free [LangSmith](https://www.langchain.com/langsmith) account.
-4. Create a free [SERPAPI](https://serpapi.com/) account.
-5. Open the `labs/0_jupyter_notebooks.ipynb` and make sure that you can run the code.
+3. Open the `labs/0_jupyter_notebooks.ipynb` and make sure that you can run the code.
+4. Create a free [LangSmith](https://www.langchain.com/langsmith) account.
+5. Create a free [SERPAPI](https://serpapi.com/) account.
 
 ## Materials
 
