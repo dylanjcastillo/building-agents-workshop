@@ -1,0 +1,36 @@
+[project]
+name = "building-agents-workshop"
+version = "0.1.0"
+description = "Building AI Agents Workshop"
+readme = "README.md"
+requires-python = ">=3.13"
+authors = [
+    { name="Dylan Castillo", email="dylan@iwanalabs.com" }
+]
+dependencies = [
+    "chromadb>=1.0.8",
+    "google-search-results>=2.4.2",
+    "jupyter>=1.1.1",
+    "langchain>=0.3.21",
+    "langchain-community>=0.3.20",
+    "langchain-experimental>=0.3.4",
+    "langchain-google-genai>=2.1.1",
+    "langchain-openai>=0.3.10",
+    "langgraph>=0.3.20",
+    "langsmith>=0.3.42",
+    "nest-asyncio>=1.6.0",
+    "pandas>=2.2.3",
+    "pydantic>=2.10.6",
+    "pypdf>=5.5.0",
+    "python-dotenv>=1.1.0",
+    "requests>=2.32.3",
+    "typing-extensions>=4.12.2",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.15.0",
+    "pre-commit>=4.2.0",
+    "pyrefly>=0.16.2",
+    "ruff>=0.11.9",
+]
