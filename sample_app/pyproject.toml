@@ -1,0 +1,47 @@
+[project]
+name = "react-agent"
+version = "0.0.1"
+description = "Starter template for making a custom Reasoning and Action agent (using tool calling) in LangGraph."
+authors = [
+    { name = "William Fu-Hinthorn", email = "13333726+hinthornw@users.noreply.github.com" },
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = [
+    "langgraph>=0.2.6",
+    "langchain-openai>=0.1.22",
+    "langchain-anthropic>=0.1.23",
+    "langchain>=0.3.19",
+    "langchain-fireworks>=0.1.7",
+    "python-dotenv>=1.0.1",
+    "langchain-community>=0.2.17",
+    "tavily-python>=0.4.0",
+    "python-fasthtml>=0.12.1",
+    "langgraph-sdk>=0.1.57",
+]
+
+
+[project.optional-dependencies]
+dev = ["mypy>=1.11.1", "ruff>=0.6.1"]
+
+[build-system]
+requires = ["setuptools>=73.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["langgraph.templates.react_agent", "react_agent"]
+[tool.setuptools.package-dir]
+"langgraph.templates.react_agent" = "src/react_agent"
+"react_agent" = "src/react_agent"
+
+[dependency-groups]
+dev = [
+    "langgraph-api>=0.0.30",
+    "langgraph-cli[inmem]>=0.1.83",
+    "pytest>=8.3.4",
+]
+
+[tool.ruff.lint]
+ignore = ["D100"]
+fixable = ["ALL"]

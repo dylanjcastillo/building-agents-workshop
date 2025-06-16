@@ -9,6 +9,7 @@ authors = [
 ]
 dependencies = [
     "chromadb>=1.0.8",
+    "datasets>=3.6.0",
     "google-search-results>=2.4.2",
     "jupyter>=1.1.1",
     "langchain>=0.3.21",
@@ -17,14 +18,19 @@ dependencies = [
     "langchain-google-genai>=2.1.1",
     "langchain-openai>=0.3.10",
     "langgraph>=0.3.20",
+    "langgraph-checkpoint-sqlite>=2.0.10",
     "langsmith>=0.3.42",
+    "matplotlib>=3.10.3",
     "nest-asyncio>=1.6.0",
+    "numpy>=2.2.5",
     "pandas>=2.2.3",
     "pydantic>=2.10.6",
     "pypdf>=5.5.0",
     "python-dotenv>=1.1.0",
+    "python-fasthtml>=0.12.19",
     "requests>=2.32.3",
     "typing-extensions>=4.12.2",
+    "wikipedia>=1.4.0",
 ]
 
 [dependency-groups]
@@ -34,3 +40,7 @@ dev = [
     "pyrefly>=0.16.2",
     "ruff>=0.11.9",
 ]
+
+
+[tool.ruff.lint]
+ignore = ["D100"]
