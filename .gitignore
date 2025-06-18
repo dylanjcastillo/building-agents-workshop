@@ -162,3 +162,4 @@ cython_debug/
 .DS_Store
 .langgraph_api/
 chroma/
+sample_app/.sesskey

@@ -40,13 +40,17 @@ def add_human_in_the_loop(
             config=interrupt_config,
             description="Please review the tool call",
         )
-        response = interrupt([request])
-        if response == "continue":
+        response = interrupt([request])[0]
+        if response["type"] == "accept":
             tool_response = tool.invoke(tool_input, config)
-        elif response == "ignore":
-            tool_response = "Tool call not approved by user."
+        elif response["type"] == "edit":
+            tool_input = response["args"]["args"]
+            tool_response = tool.invoke(tool_input, config)
+        elif response["type"] == "response":
+            user_feedback = response["args"]
+            tool_response = user_feedback
         else:
-            raise ValueError(f"Unsupported interrupt response type: {response}")
+            raise ValueError(f"Unsupported interrupt response type: {response['type']}")
 
         return tool_response
 
