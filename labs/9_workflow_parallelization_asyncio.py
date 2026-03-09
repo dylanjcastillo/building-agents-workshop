@@ -26,7 +26,7 @@ class State(BaseModel):
     aggregated_results: Optional[AggregatedResults] = None
 
 
-model = ChatOpenAI(model="gpt-4.1-mini")
+model = ChatOpenAI(model="gpt-5-mini")
 
 
 @traceable
