@@ -10,7 +10,7 @@ from langgraph.graph import END, START, MessagesState, StateGraph
 
 load_dotenv()
 
-model = ChatOpenAI(model="gpt-4.1-mini", temperature=0)
+model = ChatOpenAI(model="gpt-5-mini", temperature=0)
 
 
 # THIS IS DANGEROUS, DO NOT USE IN PRODUCTION
