@@ -13,7 +13,7 @@ from langgraph.types import interrupt
 
 load_dotenv()
 
-model = ChatOpenAI(model="gpt-5-mini", temperature=0)
+model = ChatOpenAI(model="gpt-5-nano", temperature=0)
 
 
 def add_human_in_the_loop(
@@ -99,7 +99,7 @@ def run_python_code(code: str) -> str:
 
 
 graph = create_react_agent(
-    model="openai:gpt-5-mini",
+    model="openai:gpt-5-nano",
     tools=[
         add_human_in_the_loop(run_python_code),
     ],
